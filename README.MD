@@ -1,9 +1,16 @@
-# Lab4 - WaterBill
+# Lab4 - WaterBill (Вариант 6)
 
-## Запуск
-go run ./cmd/app
+## Описание
+Проект реализует пакет `waterbill` для расчёта расхода воды, стоимости и формирования отчёта.  
+Пакет содержит функции:
 
-## Проверка документации
-go doc ./...
-godoc -http=:6060
-http://localhost:6060/pkg
+1. `WaterUsage(prev, curr float64) (float64, error)` — вычисляет расход воды.
+2. `WaterCost(cubic, tariff float64) (float64, error)` — вычисляет стоимость.
+3. `ApplyPenalty(cost *float64, penaltyPercent float64) error` — применяет штраф к стоимости.
+4. `FormatWaterReport(owner string, cubic, cost float64) (string, error)` — формирует строку отчёта.
+
+Все функции документированы и используют PascalCase.
+
+---
+
+## Структура проекта
